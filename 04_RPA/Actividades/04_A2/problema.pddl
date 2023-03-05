@@ -1,0 +1,21 @@
+(define (problem rutas)
+ (:domain rutas-clase)
+ (:objects coche - movil
+           paquete1 - cargable
+           ciudad1 ciudad2 ciudad3 ciudad4 - lugar
+ )
+ (:init (en coche ciudad1)
+  (conectada ciudad1 ciudad2)
+  (conectada ciudad2 ciudad1)
+  (conectada ciudad2 ciudad3)
+  (conectada ciudad3 ciudad2)
+  (conectada ciudad3 ciudad4)
+  (conectada ciudad4 ciudad3)
+  (conectada ciudad1 ciudad4)
+  (conectada ciudad4 ciudad1)
+  (en paquete1 ciudad1)
+ ; (cargable paquete1)
+ )
+ (:goal (and (cargado paquete1 coche))
+ )
+)
